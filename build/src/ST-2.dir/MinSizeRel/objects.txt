@@ -1,2 +1,0 @@
-D:/Programming/Testing software/ST-2/build/src/ST-2.dir/MinSizeRel/circle.obj
-D:/Programming/Testing software/ST-2/build/src/ST-2.dir/MinSizeRel/tasks.obj

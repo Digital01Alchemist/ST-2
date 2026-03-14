@@ -1,7 +1,7 @@
 // Copyright 2025 UNN-CS Team
 
 #include <gtest/gtest.h>
-#include <cmath>
+#include <cstdint>
 #include "circle.h"
 #include "tasks.h"
 
@@ -109,7 +109,7 @@ TEST_F(CircleTest, FerenceAreaRelationship) {
     double radius = c.getRadius();
     double ference = c.getFerence();
     double area = c.getArea();
-    
+
     EXPECT_NEAR(ference, 2 * PI * radius, EPSILON);
     EXPECT_NEAR(area, PI * radius * radius, EPSILON);
 }
@@ -117,10 +117,10 @@ TEST_F(CircleTest, FerenceAreaRelationship) {
 TEST_F(CircleTest, MultipleSetOperations) {
     circle.setRadius(2.0);
     EXPECT_NEAR(circle.getRadius(), 2.0, EPSILON);
-    
+
     circle.setRadius(3.0);
     EXPECT_NEAR(circle.getRadius(), 3.0, EPSILON);
-    
+
     circle.setRadius(4.0);
     EXPECT_NEAR(circle.getRadius(), 4.0, EPSILON);
 }
@@ -129,7 +129,7 @@ TEST_F(CircleTest, SetFerenceThenSetRadius) {
     double newFerence = 2 * PI * 5.0;
     circle.setFerence(newFerence);
     EXPECT_NEAR(circle.getRadius(), 5.0, EPSILON);
-    
+
     circle.setRadius(3.0);
     EXPECT_NEAR(circle.getRadius(), 3.0, EPSILON);
     EXPECT_NEAR(circle.getFerence(), 2 * PI * 3.0, EPSILON);
@@ -144,41 +144,41 @@ TEST(RopeTaskTest, RopeGapCalculation) {
 TEST(RopeTaskTest, RopeGapIndependentOfEarthRadius) {
     RopeResult result = solveRopeTask();
     double gap = result.gap;
-    
+
     EXPECT_NEAR(gap, 0.159154943, 1e-5);
 }
 
 TEST(PoolTaskTest, PoolPathCostCalculation) {
     PoolResult result = solvePoolTask();
-    
+
     double poolArea = PI * 3.0 * 3.0;
     double outerArea = PI * 4.0 * 4.0;
     double pathArea = outerArea - poolArea;
     double expectedPathCost = pathArea * 1000.0;
-    
+
     EXPECT_NEAR(result.pathCost, expectedPathCost, EPSILON);
 }
 
 TEST(PoolTaskTest, PoolFenceCostCalculation) {
     PoolResult result = solvePoolTask();
-    
+
     double outerRadius = 4.0;
     double fenceFerence = 2 * PI * outerRadius;
     double expectedFenceCost = fenceFerence * 2000.0;
-    
+
     EXPECT_NEAR(result.fenceCost, expectedFenceCost, EPSILON);
 }
 
 TEST(PoolTaskTest, PoolTotalCostCalculation) {
     PoolResult result = solvePoolTask();
-    
+
     double expectedTotal = result.pathCost + result.fenceCost;
     EXPECT_NEAR(result.totalCost, expectedTotal, EPSILON);
 }
 
 TEST(PoolTaskTest, PoolCostsPositive) {
     PoolResult result = solvePoolTask();
-    
+
     EXPECT_GT(result.pathCost, 0.0);
     EXPECT_GT(result.fenceCost, 0.0);
     EXPECT_GT(result.totalCost, 0.0);
