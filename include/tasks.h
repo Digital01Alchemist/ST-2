@@ -16,3 +16,5 @@ RopeResult solveRopeTask();
 PoolResult solvePoolTask();
 
 #endif  // INCLUDE_TASKS_H_
+
+</invoke>
