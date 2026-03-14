@@ -1,0 +1,10 @@
+^D:\PROGRAMMING\TESTING SOFTWARE\ST-2\BUILD\_DEPS\GOOGLETEST-SUBBUILD\CMAKEFILES\8BA39CE7991FCD7D27AE9630B129EDAA\GENERATE.STAMP.RULE
+setlocal
+D:\Soft\CMake\bin\cmake.exe "-SD:/Programming/Testing software/ST-2/build/_deps/googletest-subbuild" "-BD:/Programming/Testing software/ST-2/build/_deps/googletest-subbuild" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Programming/Testing software/ST-2/build/_deps/googletest-subbuild/googletest-populate.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

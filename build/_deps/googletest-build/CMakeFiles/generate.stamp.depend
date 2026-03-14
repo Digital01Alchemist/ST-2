@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+D:/Programming/Testing software/ST-2/build/_deps/googletest-src/CMakeLists.txt
+D:/Soft/CMake/share/cmake-4.2/Modules/CMakeDependentOption.cmake
+D:/Soft/CMake/share/cmake-4.2/Modules/GNUInstallDirs.cmake

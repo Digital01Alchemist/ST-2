@@ -1,0 +1,2 @@
+D:/Programming/Testing software/ST-2/build/src/ST-2.dir/Debug/circle.obj
+D:/Programming/Testing software/ST-2/build/src/ST-2.dir/Debug/tasks.obj

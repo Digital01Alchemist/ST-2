@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+D:/Programming/Testing software/ST-2/build/_deps/googletest-src/googlemock/CMakeLists.txt
+D:/Programming/Testing software/ST-2/build/_deps/googletest-src/googlemock/cmake/gmock.pc.in
+D:/Programming/Testing software/ST-2/build/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in
+D:/Soft/CMake/share/cmake-4.2/Modules/CheckCSourceCompiles.cmake
+D:/Soft/CMake/share/cmake-4.2/Modules/CheckIncludeFile.cmake
+D:/Soft/CMake/share/cmake-4.2/Modules/CheckLibraryExists.cmake
+D:/Soft/CMake/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake
+D:/Soft/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake
+D:/Soft/CMake/share/cmake-4.2/Modules/FindThreads.cmake
